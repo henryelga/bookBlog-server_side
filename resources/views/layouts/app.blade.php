@@ -18,17 +18,22 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 
-<body class="bg-gray-100 h-screen antialiased leading-none font-sans">
+<body class="bg-transparent h-screen antialiased leading-none font-sans">
     <div id="app">
-        <header class="bg-gray-800 py-6 main-header">
-            <div class="container mx-auto flex justify-between items-center px-6">
-                <div>
+        <header class="bg-transparent bg-inherit py-6">
+            <div class="container mx-auto flex justify-between items-center px-7">
+                <div class="m-auto pt-4 sm:m-auto w-3/5 block text-left">
+                    <h1 class="sm:text-gray-800 text-5xl font-bold text-shadow-md pb-1">
+                        <a href="{{ url('/') }}">
+                            Book Buzz</a>
+                    </h1>
+                </div>
+                {{-- <div>
                     <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
-                        {{-- {{ config('app.name', 'Book Blog') }} --}}
                         Book Buzz
                     </a>
-                </div>
-                <nav class="space-x-4 text-gray-300 text-sm sm:text-base">
+                </div> --}}
+                <nav class="space-x-5 text-gray-800 text-sm sm:text-base">
                     <a class="no-underline hover:underline" href="/">Home</a>
                     <a class="no-underline hover:underline" href="/blog">Book Blog</a>
                     @guest

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="background-image grid grid-cols-1 m-auto">
+    {{-- <div class="background-image grid grid-cols-1 m-auto">
         <div class="flex text-gray-100 pt-10">
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
                 <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
@@ -12,15 +12,20 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
+    {{-- <div class="m-auto pt-4 sm:m-auto w-4/5 block text-left">
+        <h1 class="sm:text-gray-800 text-5xl font-bold text-shadow-md pb-1">
+            Book Buzz
+        </h1>
+    </div> --}}
+    <div class="sm:grid grid-cols-2 gap-10 w-4/5 mx-auto py-15 border-b border-gray-200 p-5 w-[680px] rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
         <div>
             <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 width="700" alt="">
         </div>
 
-        <div class="m-auto sm:m-auto text-left w-4/5 block">
+        <div class="m-auto sm:m-auto text-left w-5/6 block ">
             <h2 class="text-3xl font-extrabold text-gray-600">
                 Struggling to be a better web developer?
             </h2>
@@ -40,8 +45,9 @@
         </div>
     </div>
 
-    <div class="sm:grid grid-cols-3 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
-        <div>
+    <div class="sm:grid grid-cols-3 gap-10 w-4/5 mx-auto py-15 border-b border-gray-500">
+        <div
+            class="p-4 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white shadow-xl bg-opacity-50 hover:rounded-2xl">
             <a href="/blog">
                 <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                     width="700" alt="">
@@ -58,7 +64,8 @@
             </a>
         </div>
 
-        <div>
+        <div
+            class="p-4 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white  shadow-xl bg-opacity-50 hover:rounded-2xl">
             <a href="/blog">
                 <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                     width="700" alt="">
@@ -75,7 +82,8 @@
             </a>
         </div>
 
-        <div>
+        <div
+            class="p-4 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white  shadow-xl bg-opacity-50 hover:rounded-2xl">
             <a href="/blog">
                 <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                     width="700" alt="">
@@ -91,10 +99,8 @@
 
             </a>
         </div>
-    </div>
-
-    <div class="sm:grid grid-cols-3 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
-        <div>
+        <div
+            class="p-4 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white  shadow-xl bg-opacity-50 hover:rounded-2xl">
             <a href="/blog">
                 <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                     width="700" alt="">
@@ -111,7 +117,8 @@
             </a>
         </div>
 
-        <div>
+        <div
+            class="p-4 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white  shadow-xl bg-opacity-50 hover:rounded-2xl">
             <a href="/blog">
                 <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                     width="700" alt="">
@@ -128,7 +135,8 @@
             </a>
         </div>
 
-        <div>
+        <div
+            class="p-4 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white  shadow-xl bg-opacity-50 hover:rounded-2xl">
             <a href="/blog">
                 <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                     width="700" alt="">
@@ -144,6 +152,7 @@
 
             </a>
         </div>
+
     </div>
 
     <div class="text-center p-15 bg-black text-white">
