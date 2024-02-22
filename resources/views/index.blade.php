@@ -154,6 +154,7 @@
             </a>
         </div>
 
+
         <div
             class="p-4 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white  shadow-xl bg-opacity-50 hover:rounded-2xl">
             <a href="/blog">
