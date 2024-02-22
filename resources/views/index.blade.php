@@ -19,6 +19,7 @@
             Book Buzz
         </h1>
     </div> --}}
+    <br><br>
     <div class="sm:grid grid-cols-2 gap-10 w-4/5 mx-auto py-15 border-b border-gray-200 p-5 w-[680px] rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
         <div>
             <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -65,7 +66,7 @@
         </div>
 
         <div
-            class="p-4 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white  shadow-xl bg-opacity-50 hover:rounded-2xl">
+            class="p-4 col-span-2 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white  shadow-xl bg-opacity-50 hover:rounded-2xl">
             <a href="/blog">
                 <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                     width="700" alt="">
@@ -136,7 +137,7 @@
         </div>
 
         <div
-            class="p-4 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white  shadow-xl bg-opacity-50 hover:rounded-2xl">
+            class="p-4 col-span-2 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white  shadow-xl bg-opacity-50 hover:rounded-2xl">
             <a href="/blog">
                 <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                     width="700" alt="">
@@ -144,6 +145,24 @@
                 <p class="py-2 text-gray-800 text-xs">Date, Time</p>
                 <p class="font-extrabold text-gray-600 text-s">
                     Book Name 6
+                </p>
+
+                <p class="py-6 text-gray-500 text-s">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus.
+                </p>
+
+            </a>
+        </div>
+
+        <div
+            class="p-4 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white  shadow-xl bg-opacity-50 hover:rounded-2xl">
+            <a href="/blog">
+                <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    width="700" alt="">
+
+                <p class="py-2 text-gray-800 text-xs">Date, Time</p>
+                <p class="font-extrabold text-gray-600 text-s">
+                    Book Name 7
                 </p>
 
                 <p class="py-6 text-gray-500 text-s">
@@ -194,6 +213,7 @@
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block">
                 <span class="uppercase text-xs">
                     PHP
+                    Make this into a photo carousel, with quotes from books, using php or smtng
                 </span>
 
                 <h3 class="text-xl font-bold py-10">
