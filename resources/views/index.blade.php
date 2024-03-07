@@ -1,26 +1,33 @@
 @extends('layouts.app')
 
-@section('content')
-    {{-- <div class="background-image grid grid-cols-1 m-auto">
-        <div class="flex text-gray-100 pt-10">
-            <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
-                <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
-                    Do you want to become a developer?
-                </h1>
-                <a href="/blog" class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase">
-                    Read More
-                </a>
-            </div>
-        </div>
-    </div> --}}
+{{-- https://github.com/lukePeavey/quotable --}}
+{{-- https://stackoverflow.com/questions/15938543/php-refresh-button-onclick --}}
 
-    {{-- <div class="m-auto pt-4 sm:m-auto w-4/5 block text-left">
-        <h1 class="sm:text-gray-800 text-5xl font-bold text-shadow-md pb-1">
-            Book Buzz
-        </h1>
-    </div> --}}
+{{-- get blogs from internet archive and display in main page --}}
+
+<?php 
+
+$api_url =  'http://api.quotable.io/random';
+$quote = json_decode(file_get_contents($api_url));
+
+?>
+
+
+@section('content')
     <br><br>
-    <div class="sm:grid grid-cols-2 gap-10 w-4/5 mx-auto py-15 border-b border-gray-200 p-5 w-[680px] rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
+    <div
+        class="sm:grid gap-10 w-4/5 mx-auto py-15 border-b border-gray-200 p-5 w-[680px] rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl text-center">
+        
+        <?php echo $quote->content; ?> <br>
+        - <?php echo $quote->author; ?>
+        <br><br>
+        <?php foreach ($quote->tags as $tag) {?>
+        # <?php echo $tag; ?> <?php }?>
+        <a href="<?php $_SERVER['PHP_SELF']; ?>">New Quote</a>
+    </div> 
+    <br><br>
+    <div
+        class="sm:grid grid-cols-2 gap-10 w-4/5 mx-auto py-15 border-b border-gray-200 p-5 w-[680px] rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
         <div>
             <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 width="700" alt="">
