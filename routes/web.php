@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\SearchBookController;
+use App\Http\Controllers\BuyBookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +25,10 @@ Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/searchbook', [SearchBookController::class, 'index']);
+
+Route::get('/buybook', [BuyBookController::class, 'index']);
+
+Auth::routes();
+
+Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
