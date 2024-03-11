@@ -13,8 +13,81 @@ $quote = json_decode(file_get_contents($api_url));
 ?>
 
 
+{{-- get books from Open Library API and display in main page --}}
+<?php
+// Open Library API URL
+$api_url = 'https://openlibrary.org/search.json?q=the%20wizard%20of%20oz';
+
+// Fetch JSON data from the Open Library API
+$json_data = file_get_contents($api_url);
+
+// Decode JSON data
+$data = json_decode($json_data, true);
+
+// Check if data is successfully retrieved
+if ($data && isset($data['docs'])) {
+    $books = $data['docs'];
+} else {
+    $books = []; // Default to an empty array if there's an error
+}
+?>
+
+
 @section('content')
     <br><br>
+
+     <!-- New section for displaying books -->
+     <div class="text-center py-15">
+        <span class="uppercase text-s text-gray-400">
+            Books
+        </span>
+
+        <h2 class="text-4xl font-bold py-10">
+            Recently Searched Books
+        </h2>
+
+        <!-- Inside the Blade view section for displaying books -->
+<div class="sm:grid grid-cols-3 gap-10 w-4/5 mx-auto py-15 border-b border-gray-500">
+    @if (count($books) > 0)
+        <?php $firstBook = $books[0]; ?>
+        <div class="p-4 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white shadow-xl bg-opacity-50 hover:rounded-2xl">
+            <a href="https://openlibrary.org{{ $firstBook['seed'][0] }}" target="_blank">
+                <img src="https://covers.openlibrary.org/b/isbn/{{ $firstBook['isbn'][0] }}-M.jpg" alt="Book Cover" class="rounded-md">
+                <!-- Display the book title -->
+                <p class="font-extrabold text-gray-600 text-s">
+                    {{ $firstBook['title'] }}
+                </p>
+
+                <!-- Display the second line if it exists, otherwise display the first line -->
+                <p class="py-6 text-gray-500 text-s">
+                    First Sentence:
+                    @if (isset($firstBook['first_sentence'][1]))
+                        {{ $firstBook['first_sentence'][1] }}
+                    @else
+                        {{ $firstBook['first_sentence'][0] }}
+                    @endif
+                </p>
+
+                <!-- Display the number_of_pages_median -->
+                <p class="py-6 text-gray-500 text-s">
+                    Number of Pages: {{ $firstBook['number_of_pages_median'] }}
+                </p>
+
+                <!-- Display the publish_year and publisher -->
+                <p class="py-6 text-gray-500 text-s">
+                    Published Year: {{ $firstBook['publish_year'][0] }}<br>
+                    Publisher: {{ $firstBook['publisher'][0] }}
+                </p>
+            </a>
+        </div>
+    @else
+        <p>No books found in the API response.</p>
+    @endif
+</div>
+
+
+
+
     <div
         class="sm:grid gap-10 w-4/5 mx-auto py-15 border-b border-gray-200 p-5 w-[680px] rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl text-center">
         
