@@ -5,7 +5,6 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\SearchBookController;
 use App\Http\Controllers\BuyBookController;
-use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,8 +30,6 @@ Route::match(['get', 'post'], '/searchbook', SearchBookController::class);
 
 Route::get('/buybook', [BuyBookController::class, 'index']);
 Route::match(['get', 'post'], '/buybook', BuyBookController::class);
-
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 Auth::routes();
 

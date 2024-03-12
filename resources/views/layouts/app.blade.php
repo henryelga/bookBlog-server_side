@@ -44,7 +44,7 @@
                             <a class="no-underline hover:underline" href="{{ route('register') }}">{{ __('Register') }}</a>
                         @endif
                     @else
-                    <a class="no-underline hover:underline" href="/dashboard"><span>{{ Auth::user()->name }}</span></a>
+                    <span class="no-underline hover:underline">{{ Auth::user()->name }}</span>
 
                         <a href="{{ route('logout') }}" class="no-underline hover:underline"
                             onclick="event.preventDefault();
