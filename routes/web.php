@@ -5,6 +5,7 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\SearchBookController;
 use App\Http\Controllers\BuyBookController;
+use App\Http\Controllers\AuthorsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,9 @@ Route::match(['get', 'post'], '/searchbook', SearchBookController::class);
 
 Route::get('/buybook', [BuyBookController::class, 'index']);
 Route::match(['get', 'post'], '/buybook', BuyBookController::class);
+
+Route::get('/authors', [AuthorsController::class, 'index']);
+Route::match(['get', 'post'], '/authors', AuthorsController::class);
 
 Auth::routes();
 

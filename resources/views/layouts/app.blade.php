@@ -35,6 +35,7 @@
                 </div> --}}
                 <nav class="space-x-5 text-gray-800 text-sm sm:text-base">
                     <a class="no-underline hover:underline" href="/">Home</a>
+                    <a class="no-underline hover:underline" href="/authors">Authors</a>
                     <a class="no-underline hover:underline" href="/searchbook">Search</a>
                     <a class="no-underline hover:underline" href="/buybook">Buy</a>
                     <a class="no-underline hover:underline" href="/blog">Book Blog</a>
