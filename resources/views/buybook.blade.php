@@ -14,15 +14,19 @@ $books = $data && isset($data['docs']) ? $data['docs'] : [];
     <br><br>
 
     <div class="text-center py-15">
-        <span class="uppercase text-s text-gray-400">Buy Books</span>
-        <h2 class="text-4xl font-bold py-10">Buy Books</h2>
+        <span class="uppercase text-m py-15 text-gray-400">Buy Books</span>
 
         <!-- Search Box -->
-        <form method="get" action="/buybook">
-            <label for="inputText">Enter Text:</label>
-            <input type="text" id="inputText" name="inputText">
-            <button type="submit">Submit</button>
-        </form>
+        <div class="sm:grid gap-6 w-4/5 mx-auto py-5">
+            <form method="get" action="/buybook" class="mb-4 flex items-center">
+                <input type="text" id="inputText" name="inputText" placeholder="Start typing a book name..."
+                       class="w-full flex-grow border border-gray-300 rounded-md p-2 focus:outline-none focus:border-indigo-500">
+                <button type="submit"
+                        class="bg-indigo-500 text-white py-2 px-4 rounded-md ml-2 hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">
+                    Submit
+                </button>
+            </form>
+        </div>
         
 
         <!-- Display Books -->
