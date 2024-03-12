@@ -12,6 +12,11 @@ $quote = json_decode(file_get_contents($api_url));
 
 ?>
 
+{{-- Add content to blog post from php, make a databse with content and push to the blog posts in this page --}}
+{{-- Another page can be for authors, or book reviews --}}
+{{-- need to format create blog post page, add extra fields, maybe drop down fro genres, category --}}
+{{-- format footer --}}
+
 
 @section('content')
     <br><br>
