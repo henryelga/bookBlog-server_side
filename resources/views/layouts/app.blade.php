@@ -22,7 +22,7 @@
     <div id="app">
         <header class="bg-transparent bg-inherit py-6">
             <div class="container mx-auto flex justify-between items-center px-7">
-                <div class="m-auto pt-4 sm:m-auto w-3/5 block text-left">
+                <div class="m-auto pt-4 sm:m-auto w-3/4 block text-left">
                     <h1 class="sm:text-gray-800 text-5xl font-bold text-shadow-md pb-1">
                         <a href="{{ url('/') }}">
                             Book Buzz</a>
@@ -45,7 +45,7 @@
                             <a class="no-underline hover:underline" href="{{ route('register') }}">{{ __('Register') }}</a>
                         @endif
                     @else
-                    <span class="no-underline hover:underline">{{ Auth::user()->name }}</span>
+                        <span class="no-underline hover:underline">{{ Auth::user()->name }}</span>
 
                         <a href="{{ route('logout') }}" class="no-underline hover:underline"
                             onclick="event.preventDefault();
@@ -57,6 +57,7 @@
                 </nav>
             </div>
         </header>
+
 
         <div>
             @yield('content')
