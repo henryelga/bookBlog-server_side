@@ -46,8 +46,9 @@ $books = $data && isset($data['docs']) ? $data['docs'] : [];
 
 
 
-        <div class="sm:grid grid-cols-3 gap-10 w-4/5 mx-auto py-15 border-b border-gray-500">
+       
             @if (count($books) > 0)
+             <div class="sm:grid grid-cols-3 gap-10 w-4/5 mx-auto py-15 border-b border-gray-500">
                 <?php
                 $numFound = isset($data['numFound']) ? $data['numFound'] : 5;
                 $fixedNumber = 15;
@@ -131,8 +132,9 @@ $books = $data && isset($data['docs']) ? $data['docs'] : [];
                         </a>
                     </div>
                 @endfor
+            </div>
             @else
                 <p>No books found in the API response.</p>
             @endif
-        </div>
+    </div>
     @endsection

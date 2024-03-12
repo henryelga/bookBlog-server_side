@@ -30,8 +30,8 @@ $books = $data && isset($data['docs']) ? $data['docs'] : [];
         
 
         <!-- Display Books -->
-        <div class="sm:grid grid-cols-1 gap-5 w-4/5 mx-auto py-15 border-b border-gray-500">
-            @if (count($books) > 0)
+        
+            @if (count($books) > 0)<div class="sm:grid grid-cols-1 gap-5 w-4/5 mx-auto py-15 border-b border-gray-500">
                 @php $numBooks = min(count($books), 20); @endphp
                 @for ($i = 0; $i < $numBooks; $i++)
                     <?php $currentBook = $books[$i]; ?>

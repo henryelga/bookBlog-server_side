@@ -28,7 +28,7 @@ $authors = $data && isset($data['docs']) ? $data['docs'] : [];
 
     <div class="text-center py-15">
         <span class="uppercase text-m py-15 text-gray-400">Look Up Authors</span>
-    </div>
+    
 
     <!-- Search Box -->
     <div class="sm:grid gap-6 w-4/5 mx-auto py-5">
@@ -42,8 +42,9 @@ $authors = $data && isset($data['docs']) ? $data['docs'] : [];
         </form>
     </div>
 
-    <div class="p-4 mx-10 my-4 rounded-xl bg-white shadow-xl bg-opacity-50 hover:rounded-2xl">
+    
         @if (count($authors) > 0)
+        <div class="p-4 mx-10 my-4 rounded-xl bg-white shadow-xl bg-opacity-50 hover:rounded-2xl">
             @for ($i = 0; $i < min(5, count($authors)); $i++)
                 <?php $currentAuthor = $authors[$i]; ?>
 
@@ -120,6 +121,7 @@ $authors = $data && isset($data['docs']) ? $data['docs'] : [];
                 }
                 ?>
             @endfor
+        </div>
         @else
             <p>No authors found in the API response.</p>
         @endif
