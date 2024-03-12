@@ -28,6 +28,7 @@ Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->nam
 Route::get('/searchbook', [SearchBookController::class, 'index']);
 
 Route::get('/buybook', [BuyBookController::class, 'index']);
+Route::match(['get', 'post'], '/buybook', BuyBookController::class);
 
 Auth::routes();
 
