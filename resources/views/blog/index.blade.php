@@ -29,11 +29,12 @@
     @foreach ($posts as $post)
         
         <div class="p-4 pb-15 pt-10 mx-20 my-4 flex items-center w-50 group shadow-2xl bg-opacity-80 rounded-xl" style="position: relative;">
-            <img src="{{ asset('images/' . $post->image_path) }}" width="350" class="mr-4 rounded-xl" alt="">
+            <img src="{{ asset('images/' . $post->image_path) }}" width="250" class="mr-4 rounded-xl" alt="">
             <div class="ml-4 flex-grow">
                 <p class="text-gray-800 text-xs pb-2">By <span class="font-bold italic">{{ $post->user->name }}</span>, Created on {{ date('jS M Y', strtotime($post->updated_at)) }}</p>
                 <h2 class="font-extrabold text-gray-600 text-4xl">{{ $post->title }}</h2>
-                <p class="mb-3 py-6 text-gray-700 text-s leading-8 font-light">{{ $post->description }}</p>
+                {{-- <p class="mb-3 py-6 text-gray-700 text-s leading-8 font-light">{{ $post->description }}</p> --}}
+                <p class="mb-3 py-6 text-gray-700 text-s leading-8 font-light">{{ substr($post->description, 0, 300) . (strlen($post->description) > 100 ? '...' : '') }}</p>
                 <a href="/blog/{{ $post->slug }}" class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">Keep Reading</a>
             </div>
         
