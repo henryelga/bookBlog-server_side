@@ -40,27 +40,22 @@ $quote = json_decode(file_get_contents($api_url));
     <div
         class="sm:grid grid-cols-2 gap-10 w-4/5 mx-auto py-15 border-b border-gray-200 p-5 w-[680px] rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
         <div>
-            <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            <img src="https://s2982.pcdn.co/wp-content/uploads/2023/12/BR_ReadHarder_970x550.jpg.webp"
                 width="700" alt="">
         </div>
 
         <div class="m-auto sm:m-auto text-left w-5/6 block ">
             <h2 class="text-3xl font-extrabold text-gray-600">
-                Struggling to be a better web developer?
+                Book Riot’s 2024 Read Harder Challenge
             </h2>
 
             <p class="py-8 text-gray-500 text-s">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus.
+                Gather ’round the interwebs, readers. It’s time to announce the 2024 Read Harder Challenge! This year will be our tenth hosting Read Harder, and we’ve got some special stuff in store this time around. If you’re a Read Harder regular, it’s great to see you again! 
             </p>
 
             <p class="font-extrabold text-gray-600 text-s pb-9">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente magnam vero nostrum! Perferendis eos
-                molestias porro vero. Vel alias.
+                Need suggestions for the tasks? Looking for a community to complete the challenge with? Sign up for the Read Harder newsletter!
             </p>
-
-            <a href="/blog" class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
-                Find Out More
-            </a>
         </div>
     </div>
 
@@ -68,12 +63,12 @@ $quote = json_decode(file_get_contents($api_url));
         <div
             class="p-4 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white shadow-xl bg-opacity-50 hover:rounded-2xl">
             <a href="/blog">
-                <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                <img src="https://s2982.pcdn.co/wp-content/uploads/2024/03/covers-1.jpg.webp"
                     width="700" alt="">
 
                 <p class="py-2 text-gray-800 text-xs">Date, Time</p>
                 <p class="font-extrabold text-gray-600 text-s">
-                    Book Name 1
+                    New World War II Historical Fiction For 2024
                 </p>
 
                 <p class="py-6 text-gray-500 text-s">
@@ -86,16 +81,16 @@ $quote = json_decode(file_get_contents($api_url));
         <div
             class="p-4 col-span-2 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white  shadow-xl bg-opacity-50 hover:rounded-2xl">
             <a href="/blog">
-                <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                <img src="https://s2982.pcdn.co/wp-content/uploads/2024/03/book-club.png.webp"
                     width="700" alt="">
 
                 <p class="py-2 text-gray-800 text-xs">Date, Time</p>
                 <p class="font-extrabold text-gray-600 text-s">
-                    Book Name 2
+                    13 Book Club Picks For March 2024, From Oprah to NYPL’s Teen Banned Book Club
                 </p>
 
                 <p class="py-6 text-gray-500 text-s">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus.
+                    Spring is finally here (sorry, allergy havers)! If you enjoy reading outside, now is your time. Stuff your books in a tote and find a lovely spot; take your ereader to a place where you can people watch and read
                 </p>
 
             </a>
@@ -104,16 +99,16 @@ $quote = json_decode(file_get_contents($api_url));
         <div
             class="p-4 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white  shadow-xl bg-opacity-50 hover:rounded-2xl">
             <a href="/blog">
-                <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                <img src="https://s2982.pcdn.co/wp-content/uploads/2024/03/Baldurs-Gate-promo-image.png.webp"
                     width="700" alt="">
 
                 <p class="py-2 text-gray-800 text-xs">Date, Time</p>
                 <p class="font-extrabold text-gray-600 text-s">
-                    Book Name 3
+                    8 Ridiculously-Good Fantasy Books Like Baldur’s Gate
                 </p>
 
                 <p class="py-6 text-gray-500 text-s">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus.
+                    It was a hard-won campaign, but you did it. You nurtured a character from the start — made a backstory, rolled the dice, chose your feats, and equipped your character. 
                 </p>
 
             </a>
@@ -121,16 +116,16 @@ $quote = json_decode(file_get_contents($api_url));
         <div
             class="p-4 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white  shadow-xl bg-opacity-50 hover:rounded-2xl">
             <a href="/blog">
-                <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                <img src="https://s2982.pcdn.co/wp-content/uploads/2024/02/March-2024-childrens-new-releases-768x432.jpg.webp"
                     width="700" alt="">
 
                 <p class="py-2 text-gray-800 text-xs">Date, Time</p>
                 <p class="font-extrabold text-gray-600 text-s">
-                    Book Name 4
+                    10 Of The Best New Children’s Books Out 
                 </p>
 
                 <p class="py-6 text-gray-500 text-s">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus.
+                    The weather is getting warmer, and the flowers are blooming, which makes March a great month for reading outside (though if you have allergies like me, maybe pack a box of tissues with you!).
                 </p>
 
             </a>
@@ -139,80 +134,44 @@ $quote = json_decode(file_get_contents($api_url));
         <div
             class="p-4 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white  shadow-xl bg-opacity-50 hover:rounded-2xl">
             <a href="/blog">
-                <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                <img src="https://s2982.pcdn.co/wp-content/uploads/2024/03/a-court-of-thorns-and-roses-700-x-375.jpeg.webp"
                     width="700" alt="">
 
                 <p class="py-2 text-gray-800 text-xs">Date, Time</p>
                 <p class="font-extrabold text-gray-600 text-s">
-                    Book Name 5
+                    WTH is Up with ACOTAR?
                 </p>
 
                 <p class="py-6 text-gray-500 text-s">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus.
+                    No matter what you think of the subject matter, or the genre, or the writing style — when a bunch of people feel so strongly not just about the book, but the experience of reading the book….it’s worth consideration. 
                 </p>
 
             </a>
         </div>
 
-        <div
-            class="p-4 col-span-2 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white  shadow-xl bg-opacity-50 hover:rounded-2xl">
-            <a href="/blog">
-                <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    width="700" alt="">
-
-                <p class="py-2 text-gray-800 text-xs">Date, Time</p>
-                <p class="font-extrabold text-gray-600 text-s">
-                    Book Name 6
-                </p>
-
-                <p class="py-6 text-gray-500 text-s">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus.
-                </p>
-
-            </a>
-        </div>
-
-
-        <div
-            class="p-4 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white  shadow-xl bg-opacity-50 hover:rounded-2xl">
-            <a href="/blog">
-                <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    width="700" alt="">
-
-                <p class="py-2 text-gray-800 text-xs">Date, Time</p>
-                <p class="font-extrabold text-gray-600 text-s">
-                    Book Name 7
-                </p>
-
-                <p class="py-6 text-gray-500 text-s">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus.
-                </p>
-
-            </a>
-        </div>
-
+       
     </div>
 
     <div class="text-center p-15 bg-black text-white">
         <h2 class="text-2xl pb-5 text-l">
-            I'm an expert in...
+           Top Genres
         </h2>
 
         <span class="font-extrabold block text-4xl py-1">
-            Ux Design
+            Fiction
         </span>
         <span class="font-extrabold block text-4xl py-1">
-            Project Management
+            Mystery
         </span>
         <span class="font-extrabold block text-4xl py-1">
-            Digital Strategy
+            Thriller
         </span>
         <span class="font-extrabold block text-4xl py-1">
-            Backend Development
+            Romance
         </span>
     </div>
 
-    <div class="text-center py-15">
+    {{-- <div class="text-center py-15">
         <span class="uppercase text-s text-gray-400">
             Blog
         </span>
@@ -250,5 +209,5 @@ $quote = json_decode(file_get_contents($api_url));
         <div>
             <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" alt="">
         </div>
-    </div>
+    </div> --}}
 @endsection
