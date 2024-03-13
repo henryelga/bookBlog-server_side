@@ -16,6 +16,7 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <link href="css/elga.css" rel="stylesheet">
 </head>
 
 <body class="bg-transparent h-screen antialiased leading-none font-sans">

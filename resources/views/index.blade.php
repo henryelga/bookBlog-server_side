@@ -21,16 +21,21 @@ $quote = json_decode(file_get_contents($api_url));
 @section('content')
     <br><br>
 
-    <div
-        class="sm:grid gap-10 w-4/5 mx-auto py-15 border-b border-gray-200 p-5 w-[680px] rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl text-center">
+    <div class="sm:grid gap-10 w-4/5 mx-auto py-15 border-b border-gray-200 p-5 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
+        <div class="text-center">
+            <p class="text-lg font-semibold text-gray-800"><?php echo $quote->content; ?></p>
+            <p class="text-s py-3 text-gray-600">- <?php echo $quote->author; ?></p>
         
-        <?php echo $quote->content; ?> <br>
-        - <?php echo $quote->author; ?>
-        <br><br>
-        <?php foreach ($quote->tags as $tag) {?>
-        # <?php echo $tag; ?> <?php }?>
-        <a href="<?php $_SERVER['PHP_SELF']; ?>">New Quote</a>
-    </div> 
+            <p class="text-s text-gray-600 font-medium py-3">Tags:</p>
+            <div class="flex justify-center space-x-2">
+                <?php foreach ($quote->tags as $tag) { ?>
+                    <span class="text-s text-gray-500">#<?php echo $tag; ?></span>
+                <?php } ?>
+            </div>
+            <p class="pt-5"><a href="<?php echo $_SERVER['PHP_SELF']; ?>" class="font-semibold text-m text-blue-500 hover:underline">New Quote</a></p>
+        </div>
+    </div>
+    
     <br><br>
     <div
         class="sm:grid grid-cols-2 gap-10 w-4/5 mx-auto py-15 border-b border-gray-200 p-5 w-[680px] rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
