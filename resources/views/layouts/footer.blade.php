@@ -12,6 +12,27 @@
                     </a>
                 </li>
                 <li class="pb-1">
+                    <a href="/authors">
+                        Look up Authors
+                    </a>
+                </li>
+                <li class="pb-1">
+                    <a href="/searchbook">
+                        Search Books
+                    </a>
+                </li>
+                <li class="pb-1">
+                    <a href="/buybook">
+                        Buy Books
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        
+        <div>
+            <ul class="py-4 sm:text-s pt-4 text-gray-400">
+                <li class="pb-1">
                     <a href="/blog">
                         Blog
                     </a>
@@ -31,63 +52,35 @@
 
         <div>
             <h3 class="text-l sm:font-bold text-gray-100">
-                Find Us
+                Best Book Blogs
             </h3>
 
             <ul class="py-4 sm:text-s pt-4 text-gray-400">
                 <li class="pb-1">
-                    <a href="/">
-                        What we do
+                    <a href="https://bookriot.com/">
+                        Book Riot
                     </a>
                 </li>
                 <li class="pb-1">
-                    <a href="/">
-                        Address
+                    <a href="https://blog.reedsy.com/">
+                        Reedsy
                     </a>
                 </li>
                 <li class="pb-1">
-                    <a href="/">
-                        Phone
+                    <a href="https://www.bookbub.com/blog">
+                        BookBub
                     </a>
                 </li>
                 <li class="pb-1">
-                    <a href="/">
-                        Contact
+                    <a href="https://www.epicreads.com/blog/">
+                        Epic Read
                     </a>
                 </li>
             </ul>
         </div>
 
-        <div>
-            <h3 class="text-l sm:font-bold text-gray-100">
-                Latest posts
-            </h3>
-
-            <ul class="py-4 sm:text-s pt-4 text-gray-400">
-                <li class="pb-1">
-                    <a href="/">
-                        Why we love tech
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Why we love design
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Why to use Laravel
-                    </a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">
-                        Why PHP is the best
-                    </a>
-                </li>
-            </ul>
-        </div>
     </div>
-    <p class="w-25 w-4/5 pb-3 m-auto text-xs text-gray-100 pt-6">
+    <p class="w-25 w-4/5 m-auto text-xs text-gray-100 pt-6">
         Copyright 2017-2021 Code With Dary. All Rights Reserved
     </p>
 </footer>
