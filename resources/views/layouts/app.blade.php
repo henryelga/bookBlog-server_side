@@ -24,9 +24,9 @@
         <header class="bg-transparent bg-inherit py-6">
             <div class="container mx-auto flex justify-between items-center px-7">
                 <div class="m-auto pt-4 sm:m-auto w-3/4 block text-left">
-                    <h1 class="sm:text-gray-800 text-5xl font-bold text-shadow-md pb-1">
+                    <h1 class="sm:text-gray-800 text-5xl font-semibold text-shadow-md pb-1">
                         <a href="{{ url('/') }}">
-                            Book Buzz</a>
+                            <span class="font-light">Book</span>Buzz</a>
                     </h1>
                 </div>
                 {{-- <div>
@@ -34,12 +34,12 @@
                         Book Buzz
                     </a>
                 </div> --}}
-                <nav class="space-x-5 text-gray-800 text-sm sm:text-base">
+                <nav class="space-x-5 text-gray-800 text-sm sm:text-base flex">
                     <a class="no-underline hover:underline" href="/">Home</a>
                     <a class="no-underline hover:underline" href="/authors">Authors</a>
                     <a class="no-underline hover:underline" href="/searchbook">Search</a>
                     <a class="no-underline hover:underline" href="/buybook">Buy</a>
-                    <a class="no-underline hover:underline" href="/blog">Book Blog</a>
+                    <a class="no-underline hover:underline" href="/blog">Blog</a>
                     @guest
                         <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('Login') }}</a>
                         @if (Route::has('register'))

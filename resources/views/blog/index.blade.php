@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="w-4/5 m-auto text-center">
-        <div class="py-15 border-b border-gray-200">
-            <h1 class="text-6xl">
+        <div class="py-5 border-b border-gray-500">
+            <h1 class="text-5xl text-gray-800">
                 Blog Posts
             </h1>
         </div>
@@ -18,7 +18,7 @@
     @endif
 
     @if (Auth::check())
-        <div class="pt-15 w-4/5 m-auto">
+        <div class="py-8 w-4/5 m-auto">
             <a href="/blog/create"
                 class="bg-blue-500 uppercase bg-transparent text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl mb-3">
                 Create post
@@ -28,8 +28,8 @@
 
     @foreach ($posts as $post)
         
-        <div class="p-4 pb-15 pt-10 mx-20 my-4 flex items-center w-50 group shadow-2xl bg-opacity-80 rounded-xl" style="position: relative;">
-            <img src="{{ asset('images/' . $post->image_path) }}" width="250" class="mr-4 rounded-xl" alt="">
+        <div class="p-4 pb-15 pt-10 mx-20 my-4 flex items-center w-50 group shadow-2xl bg-white bg-opacity-50 mb-10 rounded-xl" style="position: relative;">
+            <img src="{{ asset('images/' . $post->image_path) }}" width="200" class="mr-4 rounded-xl" alt="">
             <div class="ml-4 flex-grow">
                 <p class="text-gray-800 text-xs pb-2">By <span class="font-bold italic">{{ $post->user->name }}</span>, Created on {{ date('jS M Y', strtotime($post->updated_at)) }}</p>
                 <h2 class="font-extrabold text-gray-600 text-4xl">{{ $post->title }}</h2>
