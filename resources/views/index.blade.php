@@ -5,9 +5,9 @@
 
 {{-- get blogs from internet archive and display in main page --}}
 
-<?php 
+<?php
 
-$api_url =  'http://api.quotable.io/random';
+$api_url = 'http://api.quotable.io/random';
 $quote = json_decode(file_get_contents($api_url));
 
 ?>
@@ -21,27 +21,44 @@ $quote = json_decode(file_get_contents($api_url));
 @section('content')
     <br><br>
 
-    <div class="sm:grid gap-10 w-4/5 mx-auto py-15 border-b border-gray-200 p-5 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
+    <div
+        class="sm:grid gap-10 w-4/5 mx-auto py-15 border-b border-gray-200 p-5 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
         <div class="text-center">
             <p class="text-lg font-semibold text-gray-800"><?php echo $quote->content; ?></p>
             <p class="text-s py-3 text-gray-600">- <?php echo $quote->author; ?></p>
-        
+
             <p class="text-s text-gray-600 font-medium py-3">Tags:</p>
             <div class="flex justify-center space-x-2">
                 <?php foreach ($quote->tags as $tag) { ?>
-                    <span class="text-s text-gray-500">#<?php echo $tag; ?></span>
+                <span class="text-s text-gray-500">#<?php echo $tag; ?></span>
                 <?php } ?>
             </div>
-            <p class="pt-5"><a href="<?php echo $_SERVER['PHP_SELF']; ?>" class="font-semibold text-m text-blue-500 hover:underline">New Quote</a></p>
+            <p class="pt-5"><a href="<?php echo $_SERVER['PHP_SELF']; ?>" class="font-semibold text-m text-blue-500 hover:underline">New
+                    Quote</a></p>
         </div>
     </div>
-    
+
+    <div class="grid grid-cols-2 gap-10 w-4/5 mx-auto py-15">
+        @foreach ($posts as $post)
+            <div class="border-b border-gray-200 p-5 rounded-xl group bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
+                <div>
+                    <img src="{{ asset('images/' . $post->image_path) }}" width="700" alt="blog_image">
+                </div>
+                <div class="text-left mt-5">
+                    <h2 class="text-3xl font-extrabold text-gray-600">{{ $post->title }}</h2>
+                    <p class="py-8 text-gray-500 text-s">{{ $post->description }}</p>
+                </div>
+            </div>
+        @endforeach
+    </div>
+
+
     <br><br>
-    <div
+    {{-- <div
         class="sm:grid grid-cols-2 gap-10 w-4/5 mx-auto py-15 border-b border-gray-200 p-5 w-[680px] rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
         <div>
-            <img src="https://s2982.pcdn.co/wp-content/uploads/2023/12/BR_ReadHarder_970x550.jpg.webp"
-                width="700" alt="">
+            <img src="https://s2982.pcdn.co/wp-content/uploads/2023/12/BR_ReadHarder_970x550.jpg.webp" width="700"
+                alt="">
         </div>
 
         <div class="m-auto sm:m-auto text-left w-5/6 block ">
@@ -50,11 +67,14 @@ $quote = json_decode(file_get_contents($api_url));
             </h2>
 
             <p class="py-8 text-gray-500 text-s">
-                Gather ’round the interwebs, readers. It’s time to announce the 2024 Read Harder Challenge! This year will be our tenth hosting Read Harder, and we’ve got some special stuff in store this time around. If you’re a Read Harder regular, it’s great to see you again! 
+                Gather ’round the interwebs, readers. It’s time to announce the 2024 Read Harder Challenge! This year will
+                be our tenth hosting Read Harder, and we’ve got some special stuff in store this time around. If you’re a
+                Read Harder regular, it’s great to see you again!
             </p>
 
             <p class="font-extrabold text-gray-600 text-s pb-9">
-                Need suggestions for the tasks? Looking for a community to complete the challenge with? Sign up for the Read Harder newsletter!
+                Need suggestions for the tasks? Looking for a community to complete the challenge with? Sign up for the Read
+                Harder newsletter!
             </p>
         </div>
     </div>
@@ -63,8 +83,7 @@ $quote = json_decode(file_get_contents($api_url));
         <div
             class="p-4 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white shadow-xl bg-opacity-50 hover:rounded-2xl">
             <a href="/blog">
-                <img src="https://s2982.pcdn.co/wp-content/uploads/2024/03/covers-1.jpg.webp"
-                    width="700" alt="">
+                <img src="https://s2982.pcdn.co/wp-content/uploads/2024/03/covers-1.jpg.webp" width="700" alt="">
 
                 <p class="py-2 text-gray-800 text-xs">Date, Time</p>
                 <p class="font-extrabold text-gray-600 text-s">
@@ -81,8 +100,8 @@ $quote = json_decode(file_get_contents($api_url));
         <div
             class="p-4 col-span-2 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white  shadow-xl bg-opacity-50 hover:rounded-2xl">
             <a href="/blog">
-                <img src="https://s2982.pcdn.co/wp-content/uploads/2024/03/book-club.png.webp"
-                    width="700" alt="">
+                <img src="https://s2982.pcdn.co/wp-content/uploads/2024/03/book-club.png.webp" width="700"
+                    alt="">
 
                 <p class="py-2 text-gray-800 text-xs">Date, Time</p>
                 <p class="font-extrabold text-gray-600 text-s">
@@ -90,7 +109,9 @@ $quote = json_decode(file_get_contents($api_url));
                 </p>
 
                 <p class="py-6 text-gray-500 text-s">
-                    Spring is finally here (sorry, allergy havers)! If you enjoy reading outside, now is your time. Stuff your books in a tote and find a lovely spot; take your ereader to a place where you can people watch and read
+                    Spring is finally here (sorry, allergy havers)! If you enjoy reading outside, now is your time. Stuff
+                    your books in a tote and find a lovely spot; take your ereader to a place where you can people watch and
+                    read
                 </p>
 
             </a>
@@ -99,8 +120,8 @@ $quote = json_decode(file_get_contents($api_url));
         <div
             class="p-4 items-center justify-center w-[680px] rounded-xl group sm:flex space-x-6 bg-white  shadow-xl bg-opacity-50 hover:rounded-2xl">
             <a href="/blog">
-                <img src="https://s2982.pcdn.co/wp-content/uploads/2024/03/Baldurs-Gate-promo-image.png.webp"
-                    width="700" alt="">
+                <img src="https://s2982.pcdn.co/wp-content/uploads/2024/03/Baldurs-Gate-promo-image.png.webp" width="700"
+                    alt="">
 
                 <p class="py-2 text-gray-800 text-xs">Date, Time</p>
                 <p class="font-extrabold text-gray-600 text-s">
@@ -108,7 +129,8 @@ $quote = json_decode(file_get_contents($api_url));
                 </p>
 
                 <p class="py-6 text-gray-500 text-s">
-                    It was a hard-won campaign, but you did it. You nurtured a character from the start — made a backstory, rolled the dice, chose your feats, and equipped your character. 
+                    It was a hard-won campaign, but you did it. You nurtured a character from the start — made a backstory,
+                    rolled the dice, chose your feats, and equipped your character.
                 </p>
 
             </a>
@@ -121,11 +143,12 @@ $quote = json_decode(file_get_contents($api_url));
 
                 <p class="py-2 text-gray-800 text-xs">Date, Time</p>
                 <p class="font-extrabold text-gray-600 text-s">
-                    10 Of The Best New Children’s Books Out 
+                    10 Of The Best New Children’s Books Out
                 </p>
 
                 <p class="py-6 text-gray-500 text-s">
-                    The weather is getting warmer, and the flowers are blooming, which makes March a great month for reading outside (though if you have allergies like me, maybe pack a box of tissues with you!).
+                    The weather is getting warmer, and the flowers are blooming, which makes March a great month for reading
+                    outside (though if you have allergies like me, maybe pack a box of tissues with you!).
                 </p>
 
             </a>
@@ -143,18 +166,20 @@ $quote = json_decode(file_get_contents($api_url));
                 </p>
 
                 <p class="py-6 text-gray-500 text-s">
-                    No matter what you think of the subject matter, or the genre, or the writing style — when a bunch of people feel so strongly not just about the book, but the experience of reading the book….it’s worth consideration. 
+                    No matter what you think of the subject matter, or the genre, or the writing style — when a bunch of
+                    people feel so strongly not just about the book, but the experience of reading the book….it’s worth
+                    consideration.
                 </p>
 
             </a>
         </div>
 
-       
-    </div>
+
+    </div> --}}
 
     <div class="text-center p-15 bg-black text-white">
         <h2 class="text-2xl pb-5 text-l">
-           Top Genres
+            Top Genres
         </h2>
 
         <span class="font-extrabold block text-4xl py-1">

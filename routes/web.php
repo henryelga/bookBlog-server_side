@@ -6,6 +6,7 @@ use App\Http\Controllers\PostsController;
 use App\Http\Controllers\SearchBookController;
 use App\Http\Controllers\BuyBookController;
 use App\Http\Controllers\AuthorsController;
+use App\Http\Controllers\IndexPostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,8 @@ use App\Http\Controllers\AuthorsController;
 Route::get('/', [PagesController::class, 'index']);
 
 Route::resource('/blog', PostsController::class);
+
+Route::resource('/', IndexPostsController::class);
 
 Auth::routes();
 
