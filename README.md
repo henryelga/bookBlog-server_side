@@ -16,13 +16,17 @@ Welcome to BookBuzz. Here, you can read articles about top and trending books. L
 - **Look up Authors, Search Books, Buy Books:** Feature to look up authors, search books, and get links to buy books. Data fetched from [Open Library API](https://openlibrary.org/developers/api)
 
 <p align="center">
-<img src="https://github.com/henryelga/bookBlog-server_side/assets/67817308/9cde6622-1312-4271-914f-048cb53a8963" width="600" />
-    </p>
-    <p align="center">
+    <img src="https://github.com/henryelga/bookBlog-server_side/assets/67817308/9cde6622-1312-4271-914f-048cb53a8963" width="600" />
+</p>
+<p align="center">
     <img src="https://github.com/henryelga/bookBlog-server_side/assets/67817308/68ac4222-7aa8-4025-b3f2-5f21fea56a9b" width="600" />
-    </p><p align="center">
+</p>
+<p align="center">
     <img src="https://github.com/henryelga/bookBlog-server_side/assets/67817308/feae2908-8873-4cf4-86b6-edb1c7b248c4" width="600" />
-    </p>
+</p>
+
+- Users can view list of blogs and view individual blogs
+- Admins can create new blog posts, edit posts and delete posts
     
 
 
@@ -66,3 +70,6 @@ Migrate the tables
 php artisan migrate
 ```
 
+### References
+
+- [BookRiot](https://bookriot.com/)
